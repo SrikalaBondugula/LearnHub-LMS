@@ -1,0 +1,177 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Edit Quiz</title>
+
+    <link rel="stylesheet" href="{% static 'edit_quiz.css' %}">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Edit Quiz</h1>
+
+
+    <form method="POST">
+
+        {% csrf_token %}
+
+
+        <!-- Quiz Title -->
+
+        <div class="form-group">
+
+            <label>Quiz Title</label>
+
+            <input
+                type="text"
+                name="q_title"
+                value="{{ quiz.q_title }}"
+                required
+            >
+
+        </div>
+
+
+        <hr>
+
+
+        <!-- Questions -->
+
+        {% for q in questions %}
+
+        <div class="question">
+
+            <h3>
+                Question {{ forloop.counter }}
+            </h3>
+
+
+            <div class="form-group">
+
+                <label>Question</label>
+
+                <textarea
+                    name="question_{{ q.id }}"
+                    rows="3"
+                    required
+                >{{ q.question }}</textarea>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>Option A</label>
+
+                <input
+                    type="text"
+                    name="option1_{{ q.id }}"
+                    value="{{ q.option1 }}"
+                    required
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>Option B</label>
+
+                <input
+                    type="text"
+                    name="option2_{{ q.id }}"
+                    value="{{ q.option2 }}"
+                    required
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>Option C</label>
+
+                <input
+                    type="text"
+                    name="option3_{{ q.id }}"
+                    value="{{ q.option3 }}"
+                    required
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>Option D</label>
+
+                <input
+                    type="text"
+                    name="option4_{{ q.id }}"
+                    value="{{ q.option4 }}"
+                    required
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>Correct Answer</label>
+
+                <select name="answer_{{ q.id }}" required>
+
+                    <option value="A"
+                        {% if q.answer == "A" %}selected{% endif %}>
+                        A
+                    </option>
+
+                    <option value="B"
+                        {% if q.answer == "B" %}selected{% endif %}>
+                        B
+                    </option>
+
+                    <option value="C"
+                        {% if q.answer == "C" %}selected{% endif %}>
+                        C
+                    </option>
+
+                    <option value="D"
+                        {% if q.answer == "D" %}selected{% endif %}>
+                        D
+                    </option>
+
+                </select>
+
+            </div>
+
+        </div>
+
+        <hr>
+
+        {% endfor %}
+
+
+        <button type="submit">
+            Update Quiz
+        </button>
+
+
+        <a href="{% url 'quiz' %}">
+            Cancel
+        </a>
+
+    </form>
+
+</div>
+
+</body>
+
+</html>

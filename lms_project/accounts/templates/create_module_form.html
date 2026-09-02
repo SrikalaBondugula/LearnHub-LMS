@@ -1,0 +1,210 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Add Module</title>
+
+    <link rel="stylesheet"
+          href="{% static 'create_module_form.css' %}">
+
+</head>
+
+
+<body>
+
+<div class="page-container">
+
+
+    <!-- =========================
+         DASHBOARD BUTTON
+    ========================== -->
+
+    <div class="top-section">
+
+        <a href="{% url 'instructor_dashboard' %}">
+            <button type="button" class="dashboard-btn">
+                ← Go to Dashboard
+            </button>
+        </a>
+
+    </div>
+
+
+    <!-- =========================
+         PAGE HEADER
+    ========================== -->
+
+    <div class="page-header">
+
+        <h1>Add Module</h1>
+
+        <p>
+            Add learning material and select a quiz
+            for this module
+        </p>
+
+    </div>
+
+
+    <!-- =========================
+         MODULE FORM
+    ========================== -->
+
+    <div class="module-form-card">
+
+        <form method="POST"
+              enctype="multipart/form-data">
+
+            {% csrf_token %}
+
+
+            <!-- MODULE TITLE -->
+
+            <div class="form-group">
+
+                <label for="module_title">
+                    Module Title
+                </label>
+
+                <input
+                    type="text"
+                    id="module_title"
+                    name="module_title"
+                    placeholder="Enter module title"
+                    required>
+
+            </div>
+
+
+            <!-- MODULE DESCRIPTION -->
+
+            <div class="form-group">
+
+                <label for="description">
+                    Module Description
+                </label>
+
+                <textarea
+                    id="description"
+                    name="module_description"
+                    rows="4"
+                    placeholder="Enter module description"></textarea>
+
+            </div>
+
+
+            <!-- PDF -->
+
+            <div class="form-group">
+
+                <label for="pdf">
+                    Module PDF
+                </label>
+
+                <input
+                    type="file"
+                    id="pdf"
+                    name="pdf_url"
+                    accept=".pdf"
+                    required>
+
+                <p class="field-help">
+                    Upload the PDF learning material
+                    for this module.
+                </p>
+
+            </div>
+
+
+            <!-- QUIZ -->
+
+            <div class="form-group">
+
+                <label for="quiz">
+                    Select Quiz
+                </label>
+
+                <select
+                    id="quiz"
+                    name="quiz_id"
+                    required>
+
+                    <option value="">
+                        -- Select Quiz --
+                    </option>
+
+
+                    {% for quiz in quizzes %}
+
+                        <option value="{{ quiz.id }}">
+
+                            {{ quiz.id }} -
+                            {{ quiz.q_title }}
+
+                        </option>
+
+                    {% empty %}
+
+                        <option value="" disabled>
+
+                            No quizzes available
+
+                        </option>
+
+                    {% endfor %}
+
+                </select>
+
+
+                <p class="field-help">
+
+                    Select the quiz that belongs
+                    to this module.
+
+                </p>
+
+            </div>
+
+
+            <!-- BUTTONS -->
+
+            <div class="form-actions">
+
+                <button
+                    type="button"
+                    class="cancel-btn">
+
+                    Cancel
+
+                </button>
+
+
+                <button
+                    type="submit"
+                    class="create-btn">
+
+                    Create Module
+
+                </button>
+
+            </div>
+
+
+        </form>
+
+    </div>
+
+
+</div>
+
+</body>
+
+</html>

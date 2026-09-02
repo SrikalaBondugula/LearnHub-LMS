@@ -1,0 +1,111 @@
+{% extends "base_student.html" %}
+{% load static %}
+
+{% block title %}Take Quiz{% endblock %}
+
+{% block content %}
+
+<link rel="stylesheet" href="{% static 'take_quiz.css' %}">
+
+<div class="quiz-page">
+
+    <div class="quiz-header">
+        <h1>Take Quiz</h1>
+        <p>Choose the correct answer for each question.</p>
+    </div>
+
+
+    <form method="POST">
+
+        {% csrf_token %}
+
+        {% for question in questions %}
+
+        <div class="question-card">
+
+            <h2>
+                Question {{ forloop.counter }}
+            </h2>
+
+            <p class="question-text">
+                {{ question.question }}
+            </p>
+
+
+            <div class="options">
+
+                <label class="option">
+                    <input
+                        type="radio"
+                        name="question_{{ question.id }}"
+                        value="A"
+                        required
+                    >
+                    <span>A.</span>
+                    <span>{{ question.option1 }}</span>
+                </label>
+
+
+                <label class="option">
+                    <input
+                        type="radio"
+                        name="question_{{ question.id }}"
+                        value="B"
+                    >
+                    <span>B.</span>
+                    <span>{{ question.option2 }}</span>
+                </label>
+
+
+                <label class="option">
+                    <input
+                        type="radio"
+                        name="question_{{ question.id }}"
+                        value="C"
+                    >
+                    <span>C.</span>
+                    <span>{{ question.option3 }}</span>
+                </label>
+
+
+                <label class="option">
+                    <input
+                        type="radio"
+                        name="question_{{ question.id }}"
+                        value="D"
+                    >
+                    <span>D.</span>
+                    <span>{{ question.option4 }}</span>
+                </label>
+
+            </div>
+
+        </div>
+
+        {% empty %}
+
+        <div class="no-questions">
+            <h2>No Questions Available</h2>
+            <p>This quiz does not have any questions yet.</p>
+        </div>
+
+        {% endfor %}
+
+
+        {% if questions %}
+
+        <div class="submit-container">
+
+            <button type="submit" class="submit-quiz-btn">
+                Submit Quiz
+            </button>
+
+        </div>
+
+        {% endif %}
+
+    </form>
+
+</div>
+
+{% endblock %}

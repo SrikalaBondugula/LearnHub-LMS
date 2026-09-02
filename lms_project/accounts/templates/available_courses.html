@@ -1,0 +1,58 @@
+{% extends "base_student.html" %}
+{% load static %}
+
+{% block title %}Courses{% endblock %}
+
+{% block content %}
+
+<link rel="stylesheet" href="{% static 'available_courses.css' %}">
+
+<div class="page-header">
+    <h1>Available Courses</h1>
+    <p>Choose a course and start learning.</p>
+</div>
+
+<div class="courses-container">
+
+    {% for course in courses %}
+
+    <div class="course-card">
+
+        <h2>{{ course.title }}</h2>
+
+        <p class="instructor">
+            Instructor :
+            <strong>{{ course.instructor.username }}</strong>
+        </p>
+
+        <p class="description">
+            {{ course.description }}
+        </p>
+        {% if course.id in enrolled_courses %}
+                  <a href="{% url 'enrolled_courses' %}">
+                     <button class="enroll-btn">
+                       Enrolled
+                     </button>
+                  </a>
+        {% else %}
+
+        <a href="{% url 'enrolled_button' course.id %}">
+            <button class="enroll-btn">
+            Enroll Now
+            </button>
+        </a>
+        {% endif %}
+
+    </div>
+
+    {% empty %}
+
+    <div class="no-course">
+        <h2>No Courses Available</h2>
+    </div>
+
+    {% endfor %}
+
+</div>
+
+{% endblock %}

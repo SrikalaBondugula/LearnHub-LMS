@@ -1,0 +1,44 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Delete Quiz</title>
+    <link rel="stylesheet" href="{% static 'delete_quiz.css' %}">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Delete Quiz</h1>
+
+    <p>
+        Are you sure you want to delete
+        <strong>{{ quiz.q_title }}</strong>?
+    </p>
+
+    <p>
+        This action cannot be undone.
+    </p>
+
+    <form method="POST">
+
+        {% csrf_token %}
+
+        <button type="submit">
+            Yes, Delete
+        </button>
+
+        <a href="{% url 'quiz' %}">
+            Cancel
+        </a>
+
+    </form>
+
+</div>
+
+</body>
+
+</html>

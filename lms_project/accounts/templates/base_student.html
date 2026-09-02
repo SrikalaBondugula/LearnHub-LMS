@@ -1,0 +1,103 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Student Dashboard{% endblock %}</title>
+
+    <link rel="stylesheet" href="{% static 'base_student.css' %}">
+</head>
+<body>
+
+<div class="container">
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+
+        <div class="logo">
+            <h2>LMS</h2>
+        </div>
+
+        <ul>
+
+            <li>
+                <a href="{% url 'dashboard' %}">
+                    🏠 Dashboard
+                </a>
+            </li>
+
+            <li>
+                <a href="{% url 'available_courses' %}">
+                    📚 Courses
+                </a>
+            </li>
+
+            <li>
+                <a href="{% url 'enrolled_courses'  %}">
+                    🎓 My Courses
+                </a>
+            </li>
+
+            <li>
+                <a href="{% url 'assignment_display_student' %}">
+                    📝 Assignments
+                </a>
+            </li>
+
+            <li>
+                <a href="{% url 'quiz_display_student' %}">
+                    ❓ Quizzes
+                </a>
+            </li>
+            <li>
+                <a href="{% url 'student_certificates' %}">
+                    🏆Certificates
+                </a>
+            </li>
+
+            <li>
+                <a href="{% url 'student_profile' %}">
+                    👤 Profile
+                </a>
+            </li>
+
+            <li>
+                <a href="{% url 'logout' %}">
+                    🚪 Logout
+                </a>
+            </li>
+
+        </ul>
+
+    </div>
+
+    <!-- Main Section -->
+    <div class="main">
+
+        <!-- Navbar -->
+        <div class="navbar">
+
+            <h2>{% block page_title %}Dashboard{% endblock %}</h2>
+
+            <div class="user">
+                Welcome, {{ request.COOKIES.username }}
+            </div>
+
+        </div>
+
+        <!-- Dynamic Page Content -->
+        <div class="content">
+
+            {% block content %}
+
+            {% endblock %}
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>

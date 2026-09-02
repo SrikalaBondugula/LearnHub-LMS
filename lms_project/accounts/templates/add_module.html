@@ -1,0 +1,169 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Manage Course</title>
+
+    <link rel="stylesheet"
+          href="{% static 'add_module.css' %}">
+
+</head>
+
+
+<body>
+
+    <div class="page-container">
+
+
+        <!-- =========================
+             DASHBOARD BUTTON
+        ========================== -->
+
+        <div class="dashboard-section">
+
+            <a href="{% url 'instructor_dashboard' %}">
+                <button class="dashboard-btn">
+                    ← Go to Dashboard
+                </button>
+            </a>
+
+        </div>
+
+
+
+        <!-- =========================
+             COURSE HEADER
+        ========================== -->
+
+        <div class="course-header">
+
+            <h1>
+                {{ course.title }}
+            </h1>
+
+            <p>
+                Manage your course modules
+            </p>
+
+        </div>
+
+
+
+        <!-- =========================
+             EXISTING MODULES
+        ========================== -->
+
+        <div class="modules-section">
+
+            <h2>Course Modules</h2>
+
+
+            {% if modules %}
+
+                {% for module in modules %}
+
+                    <div class="module-card">
+
+                        <div class="module-number">
+
+                            Module {{ forloop.counter }}
+
+                        </div>
+
+
+                        <div class="module-details">
+
+                            <h3>
+                                {{ module.module_title }}
+                            </h3>
+
+                            <p>
+                                {{ module.module_description }}
+                            </p>
+
+                        </div>
+
+
+                    </div>
+
+                {% endfor %}
+
+
+            {% else %}
+
+                <div class="no-modules">
+
+                    <p>
+                        No modules have been created yet.
+                    </p>
+
+                </div>
+
+            {% endif %}
+
+        </div>
+
+
+
+        <!-- =========================
+             COURSE ACTIONS
+        ========================== -->
+
+        <div class="course-actions">
+
+
+            {% if not course.is_setup_complete %}
+
+
+                <!-- ADD MODULE BUTTON -->
+
+               <a href="{% url 'create_module_form' course.id %}"><button class="add-module-btn">
+
+                    + Add Module
+
+                </button></a> 
+
+
+                <!-- FINISH SETUP BUTTON -->
+
+                <a href="{% url 'finish_course_setup' course.id %}">
+                    <button class="finish-btn">Finish Setup</button>
+                </a>
+
+
+            {% else %}
+
+
+                <!-- SETUP COMPLETED -->
+
+                <div class="setup-completed">
+
+                    <span class="check-icon">
+                        ✓
+                    </span>
+
+                    Course Setup Completed
+
+                </div>
+
+
+            {% endif %}
+
+
+        </div>
+
+
+    </div>
+
+
+</body>
+
+</html>

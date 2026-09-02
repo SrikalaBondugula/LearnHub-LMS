@@ -1,0 +1,273 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+
+    font-family: Arial, sans-serif;
+
+    background: #f4f7fb;
+
+    min-height: 100vh;
+
+}
+
+
+.page-container {
+
+    width: 90%;
+
+    max-width: 900px;
+
+    margin: auto;
+
+    padding: 30px 0;
+
+}
+
+
+/* =========================
+   DASHBOARD BUTTON
+========================= */
+
+.top-section {
+
+    margin-bottom: 30px;
+
+}
+
+
+.dashboard-btn {
+
+    background: #ffffff;
+
+    color: #333;
+
+    border: 1px solid #d5dbe3;
+
+    padding: 11px 20px;
+
+    border-radius: 8px;
+
+    font-size: 15px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+}
+
+
+.dashboard-btn:hover {
+
+    background: #eef2f7;
+
+}
+
+
+/* =========================
+   PROFILE CARD
+========================= */
+
+.profile-card {
+
+    background: white;
+
+    width: 100%;
+
+    max-width: 650px;
+
+    margin: auto;
+
+    padding: 40px;
+
+    border-radius: 15px;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+
+}
+
+
+/* =========================
+   PROFILE HEADER
+========================= */
+
+.profile-header {
+
+    text-align: center;
+
+    margin-bottom: 35px;
+
+}
+
+
+.profile-icon {
+
+    width: 75px;
+
+    height: 75px;
+
+    margin: auto;
+
+    margin-bottom: 15px;
+
+    border-radius: 50%;
+
+    background: #e8f0ff;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 35px;
+
+}
+
+
+.profile-header h1 {
+
+    font-size: 28px;
+
+    color: #222;
+
+    margin-bottom: 8px;
+
+}
+
+
+.profile-header p {
+
+    color: #777;
+
+    font-size: 14px;
+
+}
+
+
+/* =========================
+   PROFILE DETAILS
+========================= */
+
+.profile-details {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 20px;
+
+}
+
+
+.detail-item {
+
+    padding: 18px;
+
+    background: #f8f9fc;
+
+    border-radius: 10px;
+
+    border: 1px solid #e5e8ef;
+
+}
+
+
+.detail-item label {
+
+    display: block;
+
+    font-size: 13px;
+
+    color: #777;
+
+    margin-bottom: 7px;
+
+}
+
+
+.detail-item p {
+
+    font-size: 16px;
+
+    color: #222;
+
+    font-weight: 500;
+
+}
+
+
+/* =========================
+   EDIT BUTTON
+========================= */
+
+.profile-actions {
+
+    margin-top: 30px;
+
+    text-align: center;
+
+}
+
+
+.edit-btn {
+
+    background: #2563eb;
+
+    color: white;
+
+    border: none;
+
+    padding: 13px 30px;
+
+    border-radius: 8px;
+
+    font-size: 15px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+}
+
+
+.edit-btn:hover {
+
+    background: #1d4ed8;
+
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 600px) {
+
+    .page-container {
+
+        width: 94%;
+
+        padding: 20px 0;
+
+    }
+
+
+    .profile-card {
+
+        padding: 25px;
+
+    }
+
+
+    .profile-header h1 {
+
+        font-size: 24px;
+
+    }
+
+}

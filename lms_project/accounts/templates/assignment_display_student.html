@@ -1,0 +1,105 @@
+{% extends "base_student.html" %}
+{% load static %}
+
+{% block title %}Assignments{% endblock %}
+
+
+
+
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'assignment_display_student.css' %}">
+
+<div class="page-header">
+    <div>
+        <h1>Assignments</h1>
+        <p>View and submit your course assignments.</p>
+    </div>
+</div>
+
+
+<div class="assignments-container">
+
+    {% for assignment in assignments %}
+   
+
+    <div class="assignment-card">
+
+        <div class="assignment-header">
+
+            <div>
+                <h2>{{ assignment.title }}</h2>
+
+                <p class="course-name">
+                    Course:
+                    <strong>{{ assignment.course.title }}</strong>
+                </p>
+            </div>
+
+            {% if assignment.id in submitted_assignment_ids %}
+                <span class="status submitted">
+                    Submitted
+                </span>
+            {% else %}
+                <span class="status pending">
+                    Pending
+                </span>
+            {% endif %}
+
+        </div>
+
+
+        <div class="assignment-description">
+
+            <h3>Description</h3>
+
+            <p>
+                {{ assignment.description }}
+            </p>
+
+        </div>
+
+
+        <div class="assignment-footer">
+
+            {% if assignment.id in submitted_assignment_ids %}
+
+                <a href="{% url 'submit_assignment' assignment.id %}">
+                    <button class="resubmit-btn">
+                        Resubmit Assignment
+                    </button>
+                </a>
+
+            {% else %}
+
+                <a href="{% url 'submit_assignment' assignment.id %}">
+                    <button class="submit-btn">
+                        Submit Assignment
+                    </button>
+                </a>
+
+            {% endif %}
+
+        </div>
+
+    </div>
+
+
+    {% empty %}
+
+    <div class="no-assignments">
+
+        <h2>No Assignments</h2>
+
+        <p>
+            There are no assignments available for your enrolled courses.
+        </p>
+
+    </div>
+
+
+    {% endfor %}
+
+</div>
+
+{% endblock %}

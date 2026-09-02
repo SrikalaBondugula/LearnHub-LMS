@@ -1,0 +1,86 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LearnHub | Register</title>
+
+    <link rel="stylesheet" href="{% static 'register.css' %}">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+
+<div class="container">
+
+    <div class="left">
+
+        <h1>🎓 LearnHub LMS</h1>
+
+        <h2>Create Your Account</h2>
+
+        <p>
+            Join LearnHub today and start learning from expert instructors,
+            track your progress, and achieve your goals.
+        </p>
+
+
+    </div>
+
+    <div class="right">
+
+        <form method="post" action="">
+            {% csrf_token %}
+
+            <h2>Register</h2>
+             {% if messages %}
+                {% for msg in messages %}
+                <center><p style="color: red;">{{msg}}</p></center>
+                {% endfor %}
+                {% endif %}
+
+            <div class="input-box">
+                <i class="fa-solid fa-user"></i>
+                <input type="text" placeholder="Full Name" name="username" value="{{input_data.username}}">
+            </div>
+
+            <div class="input-box">
+                <i class="fa-solid fa-envelope"></i>
+                <input type="email" placeholder="Email Address" name="email" value="{{input_data.email}}">
+            </div>
+
+            <div class="input-box">
+                <i class="fa-solid fa-phone"></i>
+                <input type="tel" placeholder="Phone Number" name="phoneNumber" value="{{input_data.phoneNumber}}">
+            </div>
+
+            <div class="input-box">
+                <i class="fa-solid fa-lock"></i>
+                <input type="password" placeholder="Password" name="password">
+            </div>
+
+            <div class="input-box">
+                <i class="fa-solid fa-lock"></i>
+                <input type="password" placeholder="Confirm Password" name="confirmpassword">
+               
+            </div>
+
+            <button type="submit">
+                Register
+            </button>
+
+            <p class="login-link">
+                Already have an account?
+                <a href="{% url 'login' %}">Login</a>
+            </p>
+
+        </form>
+
+    </div>
+
+</div>
+
+</body>
+</html>

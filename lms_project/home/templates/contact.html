@@ -1,0 +1,265 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+Contact Us | LearnHub LMS
+{% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'contact.css' %}">
+
+<!-- ================= CONTACT HERO ================= -->
+
+<section class="contact-hero">
+
+
+<div class="contact-hero-content">
+
+    <span class="contact-label">
+        <i class="fa-solid fa-envelope"></i>
+        GET IN TOUCH
+    </span>
+
+    <h1>
+        We'd Love to <span>Hear From You</span>
+    </h1>
+
+    <p>
+        Have a question, suggestion or need help?
+        Feel free to reach out to us.
+    </p>
+
+</div>
+
+
+</section>
+
+<!-- ================= CONTACT SECTION ================= -->
+
+<section class="contact-section">
+
+
+<div class="contact-container">
+
+
+    <!-- LEFT SIDE -->
+
+    <div class="contact-info">
+
+        <span class="section-label">
+            CONTACT US
+        </span>
+
+        <h2>
+            How Can We Help?
+        </h2>
+
+        <div class="contact-line"></div>
+
+        <p>
+            Whether you have a question about our courses,
+            assignments, quizzes or certificates, our team
+            is here to help.
+        </p>
+
+
+        <!-- Email -->
+
+        <div class="contact-item">
+
+            <div class="contact-icon">
+                <i class="fa-solid fa-envelope"></i>
+            </div>
+
+            <div>
+                <h3>Email</h3>
+                <p>support@learnhublms.com</p>
+            </div>
+
+        </div>
+
+
+        <!-- Phone -->
+
+        <div class="contact-item">
+
+            <div class="contact-icon">
+                <i class="fa-solid fa-phone"></i>
+            </div>
+
+            <div>
+                <h3>Phone</h3>
+                <p>+91 98765 43210</p>
+            </div>
+
+        </div>
+
+
+        <!-- Location -->
+
+        <div class="contact-item">
+
+            <div class="contact-icon">
+                <i class="fa-solid fa-location-dot"></i>
+            </div>
+
+            <div>
+                <h3>Location</h3>
+                <p>India</p>
+            </div>
+
+        </div>
+
+
+        <!-- Working Hours -->
+
+        <div class="contact-item">
+
+            <div class="contact-icon">
+                <i class="fa-solid fa-clock"></i>
+            </div>
+
+            <div>
+                <h3>Working Hours</h3>
+                <p>Monday – Friday, 9:00 AM – 6:00 PM</p>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- RIGHT SIDE - CONTACT FORM -->
+
+    <div class="contact-form-card">
+
+        <h2>Send Us a Message</h2>
+
+        <p>
+            Fill out the form below and we'll get back to you.
+        </p>
+
+
+    
+<form method="POST">
+
+    {% csrf_token %}
+
+    <div class="form-row">
+
+        <div class="form-group">
+
+            <label for="name">
+                Name
+            </label>
+
+            <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Enter your name"
+                required>
+
+        </div>
+
+
+        <div class="form-group">
+
+            <label for="email">
+                Email
+            </label>
+
+            <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Enter your email"
+                required>
+
+        </div>
+
+    </div>
+
+
+    <div class="form-group">
+
+        <label for="subject">
+            Subject
+        </label>
+
+        <input
+            type="text"
+            id="subject"
+            name="subject"
+            placeholder="Enter subject"
+            required>
+
+    </div>
+
+
+    <div class="form-group">
+
+        <label for="message">
+            Message
+        </label>
+
+        <textarea
+            id="message"
+            name="message"
+            rows="6"
+            placeholder="Write your message here..."
+            required></textarea>
+
+    </div>
+
+
+    <button type="submit" class="send-button">
+
+        Send Message
+
+        <i class="fa-solid fa-paper-plane"></i>
+
+    </button>
+
+</form>
+
+    </div>
+
+</div>
+
+
+</section>
+
+<!-- ================= FAQ / HELP ================= -->
+
+<section class="contact-help">
+
+
+<div class="help-content">
+
+    <i class="fa-solid fa-circle-question"></i>
+
+    <div>
+
+        <h2>Need Help With Your Learning?</h2>
+
+        <p>
+            Explore our courses and start learning with
+            LearnHub LMS today.
+        </p>
+
+    </div>
+
+    <a href="{% url 'courses' %}">
+        <button>
+            Explore Courses
+            <i class="fa-solid fa-arrow-right"></i>
+        </button>
+    </a>
+
+</div>
+
+
+</section>
+
+{% endblock %}

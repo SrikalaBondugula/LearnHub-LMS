@@ -1,0 +1,99 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    background:#f4f6f9;
+}
+
+.container{
+    width:90%;
+    margin:40px auto;
+}
+
+.header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:30px;
+}
+
+.header h1{
+    color:#1f2937;
+}
+
+.btn{
+    text-decoration:none;
+    background:#2563eb;
+    color:white;
+    padding:12px 22px;
+    border-radius:8px;
+}
+
+.btn:hover{
+    background:#1d4ed8;
+}
+
+.course-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:25px;
+}
+
+.course-card{
+    background:white;
+    padding:25px;
+    border-radius:12px;
+    box-shadow:0 3px 10px rgba(0,0,0,.1);
+}
+
+.course-card h2{
+    margin-bottom:15px;
+    color:#111827;
+}
+
+.course-card p{
+    color:#555;
+    line-height:1.6;
+    margin-bottom:25px;
+}
+
+.buttons{
+    display:flex;
+    gap:10px;
+}
+
+.buttons a{
+    text-decoration:none;
+    color:white;
+    padding:10px 18px;
+    border-radius:6px;
+    font-size:15px;
+}
+
+.manage{
+    background:#2563eb;
+}
+
+.edit{
+    background:#16a34a;
+}
+
+.delete{
+    background:#dc2626;
+}
+
+.manage:hover{
+    background:#1d4ed8;
+}
+
+.edit:hover{
+    background:#15803d;
+}
+
+.delete:hover{
+    background:#b91c1c;
+}

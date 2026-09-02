@@ -1,0 +1,56 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instructor Profile</title>
+    <link rel="stylesheet" href="{% static 'instructor_profile.css' %}">
+</head>
+<body>
+
+<div class="container">
+
+    <div class="profile-card">
+
+        
+
+        <h2>{{ instructor.username }}</h2>
+        <p class="role">Instructor</p>
+
+        <div class="details">
+
+            <div class="row">
+                <span>Name</span>
+                <span>{{ instructor.username }}</span>
+            </div>
+
+            <div class="row">
+                <span>Email</span>
+                <span>{{ instructor.email }}</span>
+            </div>
+
+            <div class="row">
+                <span>Role</span>
+                <span>{{ instructor.role }}</span>
+            </div>
+
+        </div>
+
+        <div class="buttons">
+            <a href="{% url 'edit_instructor_profile'%}">
+                <button>Edit Profile</button>
+            </a>
+        </div>
+        <div >
+            <a href="{% url 'instructor_dashboard'%}">
+                <button style="background-color: green;">dashboard</button>
+            </a>
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>

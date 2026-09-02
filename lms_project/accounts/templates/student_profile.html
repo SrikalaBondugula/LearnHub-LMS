@@ -1,0 +1,95 @@
+
+{% extends "base_student.html" %}
+{% load static %}
+
+{% block title %}Student Profile{% endblock %}
+
+{% block content %}
+
+    <link rel="stylesheet"
+          href="{% static 'student_profile.css' %}">
+
+<div class="page-container">
+
+
+    <!-- DASHBOARD BUTTON -->
+
+
+
+
+    <!-- PROFILE CARD -->
+
+    <div class="profile-card">
+
+
+        <div class="profile-header">
+
+            <div class="profile-icon">
+                👤
+            </div>
+
+            <h1>Student Profile</h1>
+
+            <p>View and manage your profile information</p>
+
+        </div>
+
+
+        <!-- PROFILE DETAILS -->
+
+        <div class="profile-details">
+
+
+            <!-- FULL NAME -->
+
+            <div class="detail-item">
+
+                <label>Full Name</label>
+
+                <p>{{ student.username }}</p>
+
+            </div>
+
+
+            <!-- EMAIL -->
+
+            <div class="detail-item">
+
+                <label>Email</label>
+
+                <p>{{ student.email }}</p>
+
+            </div>
+
+
+            <!-- MOBILE NUMBER -->
+
+            <div class="detail-item">
+
+                <label>Mobile Number</label>
+
+                <p>{{ student.phoneNumber}}</p>
+
+            </div>
+           
+
+
+        </div>
+
+
+        <!-- EDIT BUTTON -->
+
+        <div class="profile-actions">
+
+            <a href="{% url 'edit_student_profile' %}">
+
+                <button class="edit-btn">
+                    ✏️ Edit Profile
+                </button>
+
+            </a>
+
+        </div>
+    </div>
+</div>
+{% endblock %}

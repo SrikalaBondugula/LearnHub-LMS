@@ -1,0 +1,236 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f6f9;
+    color: #222;
+}
+
+
+.page-container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 40px auto;
+}
+
+
+/* Dashboard */
+
+.top-section {
+    margin-bottom: 25px;
+}
+
+
+.dashboard-btn {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    background: #343a40;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+
+/* Course Header */
+
+.course-header {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    margin-bottom: 30px;
+
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+}
+
+
+.course-header h1 {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+
+.course-header p {
+    color: #666;
+}
+
+
+/* Modules */
+
+.modules-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
+/* Module Card */
+
+.module-card {
+    background: white;
+    border-radius: 12px;
+    padding: 25px;
+
+    display: flex;
+    gap: 20px;
+
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+}
+
+
+/* Module Number */
+
+.module-number {
+    min-width: 110px;
+    height: 45px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #e9ecef;
+
+    border-radius: 8px;
+
+    font-weight: bold;
+}
+
+
+/* Module Content */
+
+.module-content {
+    flex: 1;
+}
+
+
+.module-content h2 {
+    font-size: 22px;
+    margin-bottom: 8px;
+}
+
+
+.module-content p {
+    color: #666;
+    margin-bottom: 20px;
+}
+
+
+/* Actions */
+
+.module-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+
+.module-actions button {
+    padding: 11px 17px;
+    border: none;
+    border-radius: 7px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+
+/* PDF */
+
+.pdf-btn {
+    background: #dc3545;
+    color: white;
+}
+
+
+.pdf-btn:hover {
+    background: #b02a37;
+}
+
+
+/* Quiz */
+
+.quiz-btn {
+    background: #0d6efd;
+    color: white;
+}
+
+
+.quiz-btn:hover {
+    background: #0b5ed7;
+}
+
+
+/* Completed */
+
+.completed {
+    padding: 10px 15px;
+
+    border-radius: 7px;
+
+    background: #d1e7dd;
+    color: #0f5132;
+
+    font-weight: bold;
+}
+
+
+/* Not Completed */
+
+.not-completed {
+    padding: 10px 15px;
+
+    border-radius: 7px;
+
+    background: #e9ecef;
+    color: #6c757d;
+
+    font-weight: bold;
+}
+
+
+/* No Modules */
+
+.no-modules {
+    background: white;
+
+    padding: 50px;
+
+    text-align: center;
+
+    border-radius: 12px;
+}
+
+
+.no-modules h2 {
+    margin-bottom: 10px;
+}
+
+
+.no-modules p {
+    color: #666;
+}
+
+
+/* Responsive */
+
+@media (max-width: 700px) {
+
+    .module-card {
+        flex-direction: column;
+    }
+
+    .module-number {
+        width: fit-content;
+    }
+
+    .module-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+}

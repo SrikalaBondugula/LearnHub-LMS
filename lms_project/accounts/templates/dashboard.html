@@ -1,0 +1,98 @@
+{% extends "base_student.html" %}
+{% load static %}
+
+{% block title %}
+Student Dashboard
+{% endblock %}
+
+{% block page_title %}
+Student Dashboard
+{% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'dashboard.css' %}">
+
+<div class="cards">
+
+    <div class="card">
+        <h3>Total Courses</h3>
+        <p>{{ total_courses }}</p>
+    </div>
+
+    <div class="card">
+        <h3>Enrolled Courses</h3>
+        <p>{{ enrolled_courses }}</p>
+    </div>
+
+    <div class="card">
+        <h3>Completed Courses</h3>
+        <p>{{ completed_courses }}</p>
+    </div>
+
+    
+
+</div>
+
+<!-- Continue Learning -->
+
+<div class="section">
+
+    <h2></h2>
+
+    <div class="course-list">
+
+        {% for course in my_courses %}
+
+        <div class="course-card">
+
+            <h3>{{ course.title }}</h3>
+
+            <p>{{ course.description }}</p>
+
+            <button>Continue Learning</button>
+
+        </div>
+
+        {% empty %}
+
+        <p></p>
+
+        {% endfor %}
+
+    </div>
+
+</div>
+
+
+<!-- Learning Motivation -->
+
+<div class="motivation">
+
+    <div class="motivation-image">
+        <img src="{% static 'images/courseimage.webp' %}"
+             alt="Learning motivation">
+    </div>
+
+    <div class="motivation-content">
+
+        <h2>Keep Learning, Keep Growing 🚀</h2>
+
+        <p class="quote">
+            "The beautiful thing about learning is that
+            nobody can take it away from you."
+        </p>
+
+        <p class="author">
+            — B.B. King
+        </p>
+
+        <p class="message">
+            Every skill you learn brings you one step
+            closer to your goal.
+        </p>
+
+    </div>
+
+</div>
+
+{% endblock %}

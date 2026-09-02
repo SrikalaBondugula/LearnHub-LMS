@@ -1,0 +1,124 @@
+/* Popup Background */
+
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0, 0, 0, 0.55);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    z-index: 1000;
+}
+
+
+/* Score Popup */
+
+.score-popup {
+    width: 400px;
+    max-width: 90%;
+
+    background: white;
+
+    padding: 35px;
+
+    border-radius: 15px;
+
+    text-align: center;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+
+    animation: popup-animation 0.3s ease;
+}
+
+
+/* Celebration Icon */
+
+.score-icon {
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+
+
+/* Heading */
+
+.score-popup h2 {
+    font-size: 26px;
+    margin-bottom: 20px;
+}
+
+
+/* Score Label */
+
+.score-label {
+    font-size: 15px;
+    color: #777;
+    margin-bottom: 5px;
+}
+
+
+/* Score */
+
+.score {
+    font-size: 42px;
+    font-weight: bold;
+    margin: 10px 0 15px;
+}
+
+
+/* Score Message */
+
+.score-message {
+    color: #666;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+
+/* Back Button */
+
+.close-btn {
+    margin-top: 20px;
+
+    padding: 12px 25px;
+
+    border: none;
+    border-radius: 8px;
+
+    background: #1877f2;
+    color: white;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.close-btn:hover {
+    background: #0d65d9;
+}
+
+
+/* Popup Animation */
+
+@keyframes popup-animation {
+
+    from {
+        transform: scale(0.7);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+}

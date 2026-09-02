@@ -1,0 +1,56 @@
+{% load static %}
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<title>{% block title %}LearnHub LMS{% endblock %}</title>
+
+<link rel="stylesheet" href="{% static 'home.css' %}">
+<link rel="stylesheet" href="{% static 'about_us.css' %}">
+
+<!-- Icons -->
+<link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+
+</head>
+
+<body>
+
+<header>
+    <div class="logo">
+        <i class="fa-solid fa-graduation-cap"></i>
+        <span>LearnHub <b>LMS</b></span>
+    </div>
+
+
+<nav>
+    <a href="{% url 'home' %}">Home</a>
+    <a href="{% url 'courses' %}">Courses</a>
+    <a href="{% url 'about_us'%}">About Us</a>
+    <a href="{% url 'contact'%}">Contact</a>
+</nav>
+
+<div class="nav-buttons">
+    <a href="{% url 'login' %}">
+        <button class="login">Login</button>
+    </a>
+
+    <a href="{% url 'register' %}">
+        <button class="register">Register</button>
+    </a>
+</div>
+
+
+</header>
+
+{% block content %}
+{% endblock %}
+
+</body>
+</html>

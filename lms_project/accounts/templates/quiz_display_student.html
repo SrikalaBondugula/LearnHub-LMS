@@ -1,0 +1,84 @@
+{% extends "base_student.html" %}
+{% load static %}
+
+{% block title %}Quizzes{% endblock %}
+
+{% block content %}
+
+<link rel="stylesheet" href="{% static 'quiz_display_student.css' %}">
+
+<div class="quiz-page">
+
+    <div class="page-header">
+        <h1>Quizzes</h1>
+        <p>Take quizzes from the courses you are enrolled in.</p>
+    </div>
+
+
+    <div class="quiz-container">
+
+        {% for quiz in quizzes %}
+
+        <div class="quiz-card">
+
+            <div class="quiz-header">
+
+                <div>
+                    <h2>{{ quiz.q_title }}</h2>
+
+                    <p class="course-name">
+                        Course:
+                        <strong>{{ quiz.course.title }}</strong>
+                    </p>
+                </div>
+
+                <span class="quiz-status">
+                    Available
+                </span>
+
+            </div>
+
+
+            <div class="quiz-details">
+
+                <div class="detail">
+                    <span class="label">Questions</span>
+                    <span class="value">
+                        {{ quiz.total_questions }}
+                    </span>
+                </div>
+
+            </div>
+
+
+            <div class="quiz-footer">
+
+                <a href="{% url 'take_quiz' quiz.id %}">
+                    <button class="take-quiz-btn">
+                        Take Quiz
+                    </button>
+                </a>
+
+            </div>
+
+        </div>
+
+        {% empty %}
+
+        <div class="no-quizzes">
+
+            <h2>No Quizzes Available</h2>
+
+            <p>
+                There are no quizzes available for your enrolled courses.
+            </p>
+
+        </div>
+
+        {% endfor %}
+
+    </div>
+
+</div>
+
+{% endblock %}

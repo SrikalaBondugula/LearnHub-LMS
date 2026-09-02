@@ -1,0 +1,76 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'student_certificate.css' %}">
+
+</head>
+<body>
+    <div class="certificates-container">
+
+    <div class="certificate-card">
+
+        <div class="certificate-inner">
+
+            <div class="certificate-brand">
+                LEARNHUB
+            </div>
+
+            <div class="certificate-subtitle">
+                LEARNING MANAGEMENT SYSTEM
+            </div>
+
+            <div class="certificate-line"></div>
+
+            <h1>CERTIFICATE</h1>
+
+            <h2>OF COMPLETION</h2>
+
+            <p class="presented-text">
+                This certificate is proudly presented to
+            </p>
+
+            <h3 class="student-name">
+                {{ user }}
+            </h3>
+
+            <p class="completion-text">
+                for successfully completing the course
+            </p>
+
+            <h2 class="course-name">
+                {{ course }}
+            </h2>
+
+            <p class="congratulations">
+                Congratulations on your achievement!
+            </p>
+
+            <div class="certificate-footer">
+
+                <div class="signature">
+                    <div class="signature-line"></div>
+                    <span>LearnHub LMS</span>
+                </div>
+
+              
+
+            </div>
+
+        </div>
+
+    </div>
+
+   
+
+ 
+
+</div>
+
+
+</body>
+</html>

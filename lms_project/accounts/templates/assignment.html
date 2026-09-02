@@ -1,0 +1,73 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignments</title>
+    <link rel="stylesheet" href="{% static 'assignment.css' %}">
+</head>
+<body>
+
+<div class="container">
+
+   
+<div class="header"> 
+    <h1>Assignments</h1>
+
+    <div class="header-buttons">
+
+        <a href="{% url 'instructor_dashboard' %}" class="dashboard-btn">
+            Dashboard
+        </a>
+
+        <a href="{% url 'create_assignment' %}" class="btn">
+            + Create Assessment
+        </a>
+
+    </div>
+</div>
+
+     {% if messages %}
+    {% for message in messages %}
+        <div class="message {{ message.tags }}">
+            {{ message }}
+        </div>
+    {% endfor %}
+    {% endif %}
+
+    {% if assignments %}
+
+        {% for assignment in assignments %}
+
+        <div class="card">
+
+            <div class="info">
+                <h2>{{ assignment.title }}</h2>
+                <p>{{ assignment.course.title }}</p>
+                <p>{{ assignment.description }}</p>
+            </div>
+
+            <div class="actions">
+                <a href="{% url 'view_assignment' assignment.id %}" class="view">View</a>
+                <a href="{% url 'edit_assignment'  assignment.id %}" class="edit">Edit</a>
+                <a href="{% url 'delete_assignment' assignment.id %}" class="delete">Delete</a>
+            </div>
+
+        </div>
+
+        {% endfor %}
+
+    {% else %}
+
+        <div class="empty">
+            <h2>No Assessments Available</h2>
+            <p>Create your first assessment.</p>
+        </div>
+
+    {% endif %}
+
+</div>
+
+</body>
+</html>

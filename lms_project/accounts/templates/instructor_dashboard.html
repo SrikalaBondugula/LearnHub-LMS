@@ -1,0 +1,59 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instructor Dashboard</title>
+    <link rel="stylesheet" href="{% static 'instructor_dashboard.css' %}">
+</head>
+<body>
+
+<div class="sidebar">
+    <h2>LMS</h2>
+
+    <ul>
+        <li><a href="{% url 'instructor_dashboard' %}">Dashboard</a></li>
+        <li><a href="{% url 'course' %}">Add Course</a></li>
+        <li><a href="{% url 'my_courses' %}">My Courses</a></li>
+        <li><a href="{% url 'assignment' %}">Assignments</a></li>
+        <li><a href="{% url 'quiz' %}">Quiz</a></li>
+        <li><a href="{% url 'instructor_profile' %}">Profile</a></li>
+        <li><a href="{% url 'logout' %}">Logout</a></li>
+    </ul>
+</div>
+
+<div class="main">
+
+    <div class="header">
+        <h1>Instructor Dashboard</h1>
+        <p>Welcome,{{ request.COOKIES.username }}</p>
+    </div>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>Total Courses</h3>
+            <h2>{{ total_courses }}</h2>
+        </div>
+
+        <div class="card">
+            <h3>Total Students</h3>
+            <h2>{{ total_students }}</h2>
+        </div>
+
+        <div class="card">
+            <h3>Assignments</h3>
+            <h2>{{ total_assignments }}</h2>
+        </div>
+
+    </div>
+
+    <div class="actions">
+        <a href="{% url 'course' %}" class="btn">+ Add New Course</a>
+    </div>
+
+</div>
+
+</body>
+</html>

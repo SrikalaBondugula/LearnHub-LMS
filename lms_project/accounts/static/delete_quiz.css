@@ -1,0 +1,79 @@
+/* Delete Quiz Page */
+
+.container {
+    width: 500px;
+    margin: 100px auto;
+    padding: 35px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    text-align: center;
+}
+
+.container h1 {
+    margin-bottom: 25px;
+}
+
+.container p {
+    font-size: 16px;
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+.container strong {
+    font-weight: 600;
+}
+
+/* Buttons */
+
+.container form {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    align-items: center;
+}
+
+.container form button {
+    padding: 11px 22px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.container form button:hover {
+    opacity: 0.85;
+}
+
+.container form a {
+    display: inline-block;
+    padding: 10px 22px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.container form a:hover {
+    opacity: 0.85;
+}
+.delete-btn {
+    padding: 11px 22px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.cancel-btn {
+    display: inline-block;
+    padding: 10px 22px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.delete-btn:hover,
+.cancel-btn:hover {
+    opacity: 0.85;
+}

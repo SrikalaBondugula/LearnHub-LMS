@@ -1,0 +1,157 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>{{ course.title }} - Modules</title>
+
+    <link rel="stylesheet"
+          href="{% static 'module_view_student.css' %}">
+
+</head>
+
+
+<body>
+
+<div class="page-container">
+
+
+    <!-- DASHBOARD -->
+
+    <div class="top-section">
+
+        <a href="{% url 'dashboard' %}">
+
+            <button class="dashboard-btn">
+                ← Go to Dashboard
+            </button>
+
+        </a>
+
+    </div>
+
+
+    <!-- COURSE HEADER -->
+
+    <div class="course-header">
+
+        <h1>{{ course.title }}</h1>
+
+        <p>
+            Complete all modules to finish this course.
+        </p>
+
+    </div>
+
+
+    <!-- MODULES -->
+
+    <div class="modules-container">
+
+        {% for module in modules %}
+
+        <div class="module-card">
+
+
+            <!-- MODULE NUMBER -->
+
+            <div class="module-number">
+
+                Module {{ forloop.counter }}
+
+            </div>
+
+
+            <!-- MODULE DETAILS -->
+
+            <div class="module-content">
+
+                <h2>
+                    {{ module.module_title }}
+                </h2>
+
+                <p>
+                    {{ module.module_description }}
+                </p>
+
+
+                <!-- ACTIONS -->
+
+                <div class="module-actions">
+
+
+                    <!-- PDF -->
+
+                    <a href="{{ module.pdf_url }}"
+                       target="_blank">
+
+                        <button class="pdf-btn">
+                            📄 View PDF
+                        </button>
+
+                    </a>
+
+
+                    <!-- QUIZ -->
+
+                    <a href="{% url 'take_quiz' module.quiz_id %}">
+
+                        <button class="quiz-btn">
+                            📝 Take Quiz
+                        </button>
+
+                    </a>
+
+
+                    <!-- COMPLETION FLAG -->
+
+                    {% if module.quiz_id in quizes %}
+
+                        <span class="completed">
+                            ✓ Completed
+                        </span>
+
+                    {% else %}
+
+                        <span class="not-completed">
+                            ○ Not Completed
+                        </span>
+
+                    {% endif %}
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+        {% empty %}
+
+        <div class="no-modules">
+
+            <h2>No modules available</h2>
+
+            <p>
+                The instructor has not added any modules yet.
+            </p>
+
+        </div>
+
+        {% endfor %}
+
+    </div>
+
+
+</div>
+
+</body>
+
+</html>

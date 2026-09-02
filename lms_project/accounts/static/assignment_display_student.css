@@ -1,0 +1,153 @@
+.page-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:30px;
+}
+
+.page-header h1{
+    font-size:32px;
+    color:#1f2937;
+    margin-bottom:8px;
+}
+
+.page-header p{
+    color:#6b7280;
+    font-size:16px;
+}
+
+
+/* Assignments Container */
+
+.assignments-container{
+    display:flex;
+    flex-direction:column;
+    gap:25px;
+}
+
+
+/* Assignment Card */
+
+.assignment-card{
+    background:white;
+    border-radius:12px;
+    padding:25px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.08);
+}
+
+
+/* Header */
+
+.assignment-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    border-bottom:1px solid #e5e7eb;
+    padding-bottom:18px;
+}
+
+.assignment-header h2{
+    color:#2563eb;
+    font-size:24px;
+    margin-bottom:8px;
+}
+
+.course-name{
+    color:#6b7280;
+    font-size:15px;
+}
+
+
+/* Status */
+
+.status{
+    padding:7px 14px;
+    border-radius:20px;
+    font-size:14px;
+    font-weight:bold;
+}
+
+.submitted{
+    background:#dcfce7;
+    color:#15803d;
+}
+
+.pending{
+    background:#fef3c7;
+    color:#b45309;
+}
+
+
+/* Description */
+
+.assignment-description{
+    padding:20px 0;
+}
+
+.assignment-description h3{
+    color:#374151;
+    margin-bottom:8px;
+}
+
+.assignment-description p{
+    color:#6b7280;
+    line-height:1.6;
+}
+
+
+/* Footer */
+
+.assignment-footer{
+    border-top:1px solid #e5e7eb;
+    padding-top:18px;
+    display:flex;
+    justify-content:flex-end;
+}
+
+
+/* Buttons */
+
+button{
+    border:none;
+    padding:12px 20px;
+    border-radius:8px;
+    color:white;
+    font-size:15px;
+    cursor:pointer;
+}
+
+.submit-btn{
+    background:#2563eb;
+}
+
+.submit-btn:hover{
+    background:#1d4ed8;
+}
+
+.resubmit-btn{
+    background:#f59e0b;
+}
+
+.resubmit-btn:hover{
+    background:#d97706;
+}
+
+
+/* No Assignments */
+
+.no-assignments{
+    background:white;
+    padding:60px;
+    text-align:center;
+    border-radius:12px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.08);
+}
+
+.no-assignments h2{
+    color:#374151;
+    margin-bottom:10px;
+}
+
+.no-assignments p{
+    color:#6b7280;
+}

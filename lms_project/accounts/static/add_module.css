@@ -1,0 +1,554 @@
+/* =========================
+   GENERAL
+========================= */
+
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+
+    margin: 0;
+
+    padding: 0;
+
+    font-family: Arial, sans-serif;
+
+    background-color: #f5f7fb;
+
+    color: #222;
+
+}
+
+
+
+/* =========================
+   MAIN CONTAINER
+========================= */
+
+.page-container {
+
+    width: 90%;
+
+    max-width: 900px;
+
+    margin: 40px auto;
+
+}
+
+
+
+/* =========================
+   DASHBOARD SECTION
+========================= */
+
+.dashboard-section {
+
+    margin-bottom: 25px;
+
+}
+
+
+
+/* =========================
+   DASHBOARD BUTTON
+========================= */
+
+.dashboard-btn {
+
+    padding: 11px 20px;
+
+    border: none;
+
+    border-radius: 7px;
+
+    background-color: #343a40;
+
+    color: white;
+
+    font-size: 15px;
+
+    font-weight: 500;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+
+}
+
+
+.dashboard-btn:hover {
+
+    background-color: #23272b;
+
+}
+
+
+
+/* =========================
+   COURSE HEADER
+========================= */
+
+.course-header {
+
+    background-color: white;
+
+    padding: 35px;
+
+    border-radius: 12px;
+
+    text-align: center;
+
+    box-shadow:
+        0 4px 15px rgba(0, 0, 0, 0.08);
+
+}
+
+
+.course-header h1 {
+
+    margin: 0 0 10px;
+
+    font-size: 32px;
+
+    font-weight: 600;
+
+}
+
+
+.course-header p {
+
+    margin: 0;
+
+    color: #777;
+
+    font-size: 16px;
+
+}
+/* =========================
+   MODULES SECTION
+========================= */
+
+.modules-section {
+
+    margin-top: 30px;
+
+    background-color: white;
+
+    padding: 25px;
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 4px 15px rgba(0, 0, 0, 0.08);
+
+}
+
+
+/* =========================
+   MODULES TITLE
+========================= */
+
+.modules-section h2 {
+
+    margin: 0 0 20px;
+
+    font-size: 24px;
+
+    font-weight: 600;
+
+    color: #222;
+
+}
+
+
+/* =========================
+   MODULE CARD
+========================= */
+
+.module-card {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    padding: 18px;
+
+    margin-bottom: 15px;
+
+    background-color: #f8faff;
+
+    border: 1px solid #e1e6ef;
+
+    border-radius: 10px;
+
+    transition: 0.2s;
+
+}
+
+
+/* Remove margin from last module */
+
+.module-card:last-child {
+
+    margin-bottom: 0;
+
+}
+
+
+/* Hover effect */
+
+.module-card:hover {
+
+    background-color: white;
+
+    border-color: #1877f2;
+
+    box-shadow:
+        0 4px 12px rgba(24, 119, 242, 0.12);
+
+    transform: translateY(-2px);
+
+}
+
+
+/* =========================
+   MODULE NUMBER
+========================= */
+
+.module-number {
+
+    min-width: 90px;
+
+    padding: 10px 12px;
+
+    background-color: #1877f2;
+
+    color: white;
+
+    border-radius: 7px;
+
+    text-align: center;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+}
+
+
+/* =========================
+   MODULE DETAILS
+========================= */
+
+.module-details {
+
+    flex: 1;
+
+}
+
+
+.module-details h3 {
+
+    margin: 0 0 6px;
+
+    font-size: 18px;
+
+    font-weight: 600;
+
+    color: #222;
+
+}
+
+
+.module-details p {
+
+    margin: 0;
+
+    font-size: 14px;
+
+    line-height: 1.5;
+
+    color: #777;
+
+}
+
+
+/* =========================
+   NO MODULES
+========================= */
+
+.no-modules {
+
+    padding: 25px;
+
+    text-align: center;
+
+    background-color: #f8f9fa;
+
+    border: 1px dashed #ccc;
+
+    border-radius: 8px;
+
+}
+
+
+.no-modules p {
+
+    margin: 0;
+
+    color: #777;
+
+    font-size: 15px;
+
+}
+
+
+/* =========================
+   MOBILE MODULE DESIGN
+========================= */
+
+@media (max-width: 600px) {
+
+    .modules-section {
+
+        padding: 18px;
+
+    }
+
+
+    .modules-section h2 {
+
+        font-size: 21px;
+
+    }
+
+
+    .module-card {
+
+        align-items: flex-start;
+
+        padding: 15px;
+
+        gap: 12px;
+
+    }
+
+
+    .module-number {
+
+        min-width: 70px;
+
+        padding: 8px 6px;
+
+        font-size: 12px;
+
+    }
+
+
+    .module-details h3 {
+
+        font-size: 16px;
+
+    }
+
+
+    .module-details p {
+
+        font-size: 13px;
+
+    }
+
+}
+
+
+
+/* =========================
+   COURSE ACTIONS
+========================= */
+
+.course-actions {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 18px;
+
+    margin-top: 30px;
+
+}
+
+
+
+/* =========================
+   COMMON BUTTON SETTINGS
+========================= */
+
+.course-actions button {
+
+    padding: 13px 25px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+
+}
+
+
+
+/* =========================
+   ADD MODULE BUTTON
+========================= */
+
+.add-module-btn {
+
+    background-color: #1877f2;
+
+    color: white;
+
+}
+
+
+.add-module-btn:hover {
+
+    background-color: #0d65d9;
+
+}
+
+
+
+/* =========================
+   FINISH SETUP BUTTON
+========================= */
+
+.finish-btn {
+
+    background-color: #28a745;
+
+    color: white;
+
+}
+
+
+.finish-btn:hover {
+
+    background-color: #218838;
+
+}
+
+
+
+/* =========================
+   SETUP COMPLETED
+========================= */
+
+.setup-completed {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 8px;
+
+    padding: 14px 25px;
+
+    border-radius: 8px;
+
+    background-color: #e8f7ed;
+
+    color: #218838;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    border: 1px solid #c8e6d0;
+
+}
+
+
+.check-icon {
+
+    font-size: 18px;
+
+}
+
+
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+@media (max-width: 600px) {
+
+
+    .page-container {
+
+        width: 92%;
+
+        margin-top: 25px;
+
+    }
+
+
+    .course-header {
+
+        padding: 25px 15px;
+
+    }
+
+
+    .course-header h1 {
+
+        font-size: 26px;
+
+    }
+
+
+    .course-header p {
+
+        font-size: 14px;
+
+    }
+
+
+    .course-actions {
+
+        flex-direction: column;
+
+        width: 100%;
+
+    }
+
+
+    .course-actions button {
+
+        width: 100%;
+
+    }
+
+
+    .setup-completed {
+
+        width: 100%;
+
+    }
+
+
+}

@@ -1,0 +1,383 @@
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+
+    margin: 0;
+
+    padding: 0;
+
+    font-family: Arial, sans-serif;
+
+    background-color: #f5f7fb;
+
+    color: #222;
+
+}
+
+
+/* =========================
+   MAIN CONTAINER
+========================= */
+
+.page-container {
+
+    width: 90%;
+
+    max-width: 800px;
+
+    margin: 35px auto 60px;
+
+}
+
+
+/* =========================
+   DASHBOARD
+========================= */
+
+.top-section {
+
+    margin-bottom: 25px;
+
+}
+
+
+.dashboard-btn {
+
+    padding: 11px 20px;
+
+    border: none;
+
+    border-radius: 7px;
+
+    background-color: #343a40;
+
+    color: white;
+
+    font-size: 14px;
+
+    cursor: pointer;
+
+}
+
+
+.dashboard-btn:hover {
+
+    background-color: #23272b;
+
+}
+
+
+/* =========================
+   PAGE HEADER
+========================= */
+
+.page-header {
+
+    text-align: center;
+
+    margin-bottom: 25px;
+
+}
+
+
+.page-header h1 {
+
+    margin: 0 0 8px;
+
+    font-size: 30px;
+
+}
+
+
+.page-header p {
+
+    margin: 0;
+
+    color: #777;
+
+    font-size: 15px;
+
+}
+
+
+/* =========================
+   FORM CARD
+========================= */
+
+.module-form-card {
+
+    background-color: white;
+
+    padding: 30px;
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 4px 15px rgba(0, 0, 0, 0.08);
+
+}
+
+
+/* =========================
+   FORM GROUP
+========================= */
+
+.form-group {
+
+    margin-bottom: 22px;
+
+}
+
+
+.form-group label {
+
+    display: block;
+
+    margin-bottom: 8px;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+}
+
+
+/* =========================
+   TEXT INPUT
+========================= */
+
+.form-group input[type="text"] {
+
+    width: 100%;
+
+    padding: 12px;
+
+    border: 1px solid #d5d5d5;
+
+    border-radius: 7px;
+
+    font-size: 14px;
+
+    outline: none;
+
+}
+
+
+.form-group input[type="text"]:focus {
+
+    border-color: #1877f2;
+
+}
+
+
+/* =========================
+   TEXTAREA
+========================= */
+
+.form-group textarea {
+
+    width: 100%;
+
+    padding: 12px;
+
+    border: 1px solid #d5d5d5;
+
+    border-radius: 7px;
+
+    font-size: 14px;
+
+    font-family: Arial, sans-serif;
+
+    resize: vertical;
+
+    outline: none;
+
+}
+
+
+.form-group textarea:focus {
+
+    border-color: #1877f2;
+
+}
+
+
+/* =========================
+   FILE INPUT
+========================= */
+
+.form-group input[type="file"] {
+
+    width: 100%;
+
+    padding: 10px;
+
+    border: 1px dashed #bdbdbd;
+
+    border-radius: 7px;
+
+    background-color: #fafafa;
+
+    cursor: pointer;
+
+}
+
+
+/* =========================
+   SELECT QUIZ
+========================= */
+
+.form-group select {
+
+    width: 100%;
+
+    padding: 12px;
+
+    border: 1px solid #d5d5d5;
+
+    border-radius: 7px;
+
+    background-color: white;
+
+    font-size: 14px;
+
+    outline: none;
+
+    cursor: pointer;
+
+}
+
+
+.form-group select:focus {
+
+    border-color: #1877f2;
+
+}
+
+
+/* =========================
+   HELP TEXT
+========================= */
+
+.field-help {
+
+    margin: 6px 0 0;
+
+    font-size: 13px;
+
+    color: #777;
+
+}
+
+
+/* =========================
+   FORM BUTTONS
+========================= */
+
+.form-actions {
+
+    display: flex;
+
+    justify-content: flex-end;
+
+    gap: 12px;
+
+    margin-top: 25px;
+
+}
+
+
+.cancel-btn,
+.create-btn {
+
+    padding: 12px 22px;
+
+    border: none;
+
+    border-radius: 7px;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+}
+
+
+/* CANCEL */
+
+.cancel-btn {
+
+    background-color: #e9ecef;
+
+    color: #333;
+
+}
+
+
+.cancel-btn:hover {
+
+    background-color: #dfe2e5;
+
+}
+
+
+/* CREATE MODULE */
+
+.create-btn {
+
+    background-color: #1877f2;
+
+    color: white;
+
+}
+
+
+.create-btn:hover {
+
+    background-color: #0d65d9;
+
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 600px) {
+
+    .page-container {
+
+        width: 92%;
+
+        margin-top: 25px;
+
+    }
+
+
+    .module-form-card {
+
+        padding: 20px;
+
+    }
+
+
+    .form-actions {
+
+        flex-direction: column;
+
+    }
+
+
+    .cancel-btn,
+    .create-btn {
+
+        width: 100%;
+
+    }
+
+}

@@ -1,0 +1,162 @@
+.quiz-page {
+    padding: 30px;
+}
+
+
+/* Page Header */
+
+.page-header {
+    margin-bottom: 30px;
+}
+
+.page-header h1 {
+    font-size: 32px;
+    margin-bottom: 8px;
+}
+
+.page-header p {
+    color: #666;
+    font-size: 16px;
+}
+
+
+/* Quiz Container */
+
+.quiz-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
+/* Quiz Card */
+
+.quiz-card {
+    background: white;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+    border: 1px solid #e5e5e5;
+}
+
+
+/* Header */
+
+.quiz-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.quiz-header h2 {
+    margin: 0 0 10px;
+    font-size: 22px;
+}
+
+.course-name {
+    margin: 0;
+    color: #666;
+}
+
+
+/* Status */
+
+.quiz-status {
+    background: #e8f5e9;
+    color: #2e7d32;
+    padding: 7px 14px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+
+/* Quiz Details */
+
+.quiz-details {
+    margin-top: 25px;
+    padding: 15px 0;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+}
+
+.detail {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.label {
+    color: #777;
+    font-size: 14px;
+}
+
+.value {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+
+/* Footer */
+
+.quiz-footer {
+    margin-top: 20px;
+    text-align: right;
+}
+
+.take-quiz-btn {
+    background: #1877f2;
+    color: white;
+    border: none;
+    padding: 11px 22px;
+    border-radius: 7px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.take-quiz-btn:hover {
+    background: #0d65d9;
+}
+
+
+/* Empty State */
+
+.no-quizzes {
+    background: white;
+    padding: 50px;
+    text-align: center;
+    border-radius: 12px;
+    border: 1px solid #e5e5e5;
+}
+
+.no-quizzes h2 {
+    margin-bottom: 10px;
+}
+
+.no-quizzes p {
+    color: #777;
+}
+
+
+/* Responsive */
+
+@media (max-width: 700px) {
+
+    .quiz-page {
+        padding: 20px;
+    }
+
+    .quiz-header {
+        flex-direction: column;
+    }
+
+    .quiz-footer {
+        text-align: left;
+    }
+
+    .take-quiz-btn {
+        width: 100%;
+    }
+}

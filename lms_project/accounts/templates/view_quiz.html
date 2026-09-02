@@ -1,0 +1,70 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>View Quiz</title>
+
+    <link rel="stylesheet" href="{% static 'view_quiz.css' %}">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>{{ quiz.q_title }}</h1>
+
+    <p>
+        <strong>Course:</strong>
+        {{ quiz.course.title }}
+    </p>
+
+    <p>
+        <strong>Total Questions:</strong>
+        {{ quiz.total_questions }}
+    </p>
+
+
+    <hr>
+
+
+    {% for q in questions %}
+
+        <div class="question">
+
+            <h3>
+                {{ forloop.counter }}. {{ q.question }}
+            </h3>
+
+            <p>A. {{ q.option1 }}</p>
+
+            <p>B. {{ q.option2 }}</p>
+
+            <p>C. {{ q.option3 }}</p>
+
+            <p>D. {{ q.option4 }}</p>
+
+            <p>
+                <strong>Correct Answer:</strong>
+                {{ q.answer }}
+            </p>
+
+        </div>
+
+        <hr>
+
+    {% endfor %}
+
+
+    <a href="{% url 'quiz' %}">
+        <button type="button">Back to Quizzes</button>
+    </a>
+
+</div>
+
+</body>
+
+</html>

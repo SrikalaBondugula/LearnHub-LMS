@@ -1,0 +1,345 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+Courses | LearnHub LMS
+{% endblock %}
+
+{% block content %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'courses.css' %}">
+{% endblock %}
+
+<section class="courses-hero">
+
+<div class="courses-hero-content">
+
+    <span class="small-title">
+        <i class="fa-solid fa-book-open"></i>
+        Explore & Learn
+    </span>
+
+    <h1>
+        Explore Our <span>Courses</span>
+    </h1>
+
+    <p>
+        Build your skills, expand your knowledge and take the
+        next step toward your goals with LearnHub LMS.
+    </p>
+
+</div>
+
+</section>
+
+<section class="courses-section">
+
+<div class="section-heading">
+
+    <span>LEARNING OPPORTUNITIES</span>
+
+    <h2>Choose What You Want to Learn</h2>
+
+    <div class="line"></div>
+
+    <p>
+        Explore technology-focused learning areas designed to
+        help you develop practical and valuable skills.
+    </p>
+
+</div>
+
+
+<div class="courses-container">
+
+
+    <!-- Python -->
+
+    <div class="course-card">
+
+        <div class="course-icon python">
+            <i class="fa-brands fa-python"></i>
+        </div>
+
+        <span class="course-category">
+            Programming
+        </span>
+
+        <h3>Python Programming</h3>
+
+        <p>
+            Learn Python fundamentals, programming concepts,
+            functions, OOP and problem solving.
+        </p>
+
+        <div class="course-bottom">
+
+            <span>
+                <i class="fa-solid fa-code"></i>
+                Beginner Friendly
+            </span>
+
+            <i class="fa-solid fa-arrow-right arrow"></i>
+
+        </div>
+
+    </div>
+
+
+    <!-- Web Development -->
+
+    <div class="course-card">
+
+        <div class="course-icon web">
+            <i class="fa-solid fa-globe"></i>
+        </div>
+
+        <span class="course-category">
+            Development
+        </span>
+
+        <h3>Web Development</h3>
+
+        <p>
+            Explore HTML, CSS, JavaScript and modern web
+            development concepts.
+        </p>
+
+        <div class="course-bottom">
+
+            <span>
+                <i class="fa-solid fa-laptop-code"></i>
+                Practical Learning
+            </span>
+
+            <i class="fa-solid fa-arrow-right arrow"></i>
+
+        </div>
+
+    </div>
+
+
+    <!-- Java -->
+
+    <div class="course-card">
+
+        <div class="course-icon java">
+            <i class="fa-brands fa-java"></i>
+        </div>
+
+        <span class="course-category">
+            Programming
+        </span>
+
+        <h3>Java Programming</h3>
+
+        <p>
+            Understand Java programming, object-oriented
+            concepts and application development.
+        </p>
+
+        <div class="course-bottom">
+
+            <span>
+                <i class="fa-solid fa-code"></i>
+                Skill Building
+            </span>
+
+            <i class="fa-solid fa-arrow-right arrow"></i>
+
+        </div>
+
+    </div>
+
+
+    <!-- SQL -->
+
+    <div class="course-card">
+
+        <div class="course-icon sql">
+            <i class="fa-solid fa-database"></i>
+        </div>
+
+        <span class="course-category">
+            Database
+        </span>
+
+        <h3>SQL & Databases</h3>
+
+        <p>
+            Learn databases, SQL queries, data manipulation
+            and database fundamentals.
+        </p>
+
+        <div class="course-bottom">
+
+            <span>
+                <i class="fa-solid fa-table"></i>
+                Data Skills
+            </span>
+
+            <i class="fa-solid fa-arrow-right arrow"></i>
+
+        </div>
+
+    </div>
+
+
+    <!-- DSA -->
+
+    <div class="course-card">
+
+        <div class="course-icon dsa">
+            <i class="fa-solid fa-diagram-project"></i>
+        </div>
+
+        <span class="course-category">
+            Computer Science
+        </span>
+
+        <h3>Data Structures & Algorithms</h3>
+
+        <p>
+            Strengthen your problem-solving skills with
+            essential data structures and algorithms.
+        </p>
+
+        <div class="course-bottom">
+
+            <span>
+                <i class="fa-solid fa-brain"></i>
+                Problem Solving
+            </span>
+
+            <i class="fa-solid fa-arrow-right arrow"></i>
+
+        </div>
+
+    </div>
+
+
+    <!-- Artificial Intelligence -->
+
+    <div class="course-card">
+
+        <div class="course-icon ai">
+            <i class="fa-solid fa-robot"></i>
+        </div>
+
+        <span class="course-category">
+            Emerging Technology
+        </span>
+
+        <h3>Artificial Intelligence</h3>
+
+        <p>
+            Discover AI concepts, machine learning fundamentals
+            and intelligent applications.
+        </p>
+
+        <div class="course-bottom">
+
+            <span>
+                <i class="fa-solid fa-microchip"></i>
+                Future Skills
+            </span>
+
+            <i class="fa-solid fa-arrow-right arrow"></i>
+
+        </div>
+
+    </div>
+
+
+    <!-- Data Science -->
+
+    <div class="course-card">
+
+        <div class="course-icon data">
+            <i class="fa-solid fa-chart-line"></i>
+        </div>
+
+        <span class="course-category">
+            Data
+        </span>
+
+        <h3>Data Science</h3>
+
+        <p>
+            Learn data analysis, visualization and the
+            fundamentals of working with real-world data.
+        </p>
+
+        <div class="course-bottom">
+
+            <span>
+                <i class="fa-solid fa-chart-column"></i>
+                Data Analysis
+            </span>
+
+            <i class="fa-solid fa-arrow-right arrow"></i>
+
+        </div>
+
+    </div>
+
+
+    <!-- Cloud Computing -->
+
+    <div class="course-card">
+
+        <div class="course-icon cloud">
+            <i class="fa-solid fa-cloud"></i>
+        </div>
+
+        <span class="course-category">
+            Cloud Computing
+        </span>
+
+        <h3>Cloud Computing</h3>
+
+        <p>
+            Understand cloud concepts, services and the
+            fundamentals of modern cloud platforms.
+        </p>
+
+        <div class="course-bottom">
+
+            <span>
+                <i class="fa-solid fa-server"></i>
+                Cloud Skills
+            </span>
+
+            <i class="fa-solid fa-arrow-right arrow"></i>
+
+        </div>
+
+    </div>
+
+
+</div>
+
+</section>
+
+<section class="course-cta">
+
+<div>
+
+    <h2>Ready to Start Learning?</h2>
+
+    <p>
+        Join LearnHub LMS and start building your skills today.
+    </p>
+
+    <a href="{% url 'register' %}">
+        <button>
+            Get Started
+            <i class="fa-solid fa-arrow-right"></i>
+        </button>
+    </a>
+
+</div>
+
+</section>
+
+{% endblock %}

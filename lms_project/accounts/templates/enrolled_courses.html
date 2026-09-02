@@ -1,0 +1,58 @@
+{% extends "base_student.html" %}
+{% load static %}
+
+{% block title %}My Courses{% endblock %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'enrolled_courses.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<div class="page-header">
+    <h1>My Enrolled Courses</h1>
+    <p>Continue learning from your enrolled courses.</p>
+</div>
+
+<div class="courses-container">
+
+    {% for course in courses %}
+
+    <div class="course-card">
+
+        <div class="course-header">
+            <h2>{{ course.course_id.title }}</h2>
+            <span class="status">Enrolled</span>
+        </div>
+
+        <p class="instructor">
+            <strong>Instructor:</strong>
+            {{ course.course_id.instructor }}
+        </p>
+
+        <p class="description">
+            {{ course.course_id.description }}
+        </p>
+
+        <div class="buttons">
+            <a href="{% url 'module_view_student' course.course_id.id %}">
+                <button class="continue-btn">
+                    Continue Learning
+                </button>
+            </a>
+        </div>
+
+    </div>
+
+    {% empty %}
+
+    <div class="empty-card">
+        <h2>No Enrolled Courses</h2>
+        <p>You haven't enrolled in any course yet.</p>
+    </div>
+
+    {% endfor %}
+
+</div>
+
+{% endblock %}

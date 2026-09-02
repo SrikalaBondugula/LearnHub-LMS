@@ -1,0 +1,44 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>View Assignment</title>
+    <link rel="stylesheet" href="{% static 'view_assignment.css' %}">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>{{ assignment.title }}</h1>
+
+    <div class="assignment-details">
+
+        <p>
+            <strong>Course:</strong>
+            {{ assignment.course.title }}
+        </p>
+
+        <p>
+            <strong>Description:</strong>
+        </p>
+
+        <div class="description">
+            {{ assignment.description }}
+        </div>
+
+    </div>
+
+    <div class="buttons">
+
+        <a href="{% url 'assignment' %}">
+            <button type="button">Back to Assignments</button>
+        </a>
+
+    </div>
+
+</div>
+
+</body>
+</html>

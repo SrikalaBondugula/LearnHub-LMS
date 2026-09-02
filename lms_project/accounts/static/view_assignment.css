@@ -1,0 +1,75 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background: #ebedf0;
+}
+
+.container {
+    width: 90%;
+    max-width: 800px;
+    margin: 50px auto;
+    background: #fff;
+    padding: 35px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.assignment-details {
+    margin-top: 20px;
+}
+
+.assignment-details p {
+    color: #444;
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.assignment-details strong {
+    color: #333;
+}
+
+.description {
+    background: #f8f9fa;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 20px;
+    color: #444;
+    line-height: 1.7;
+    margin-top: 8px;
+    min-height: 120px;
+}
+
+.buttons {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.buttons a {
+    text-decoration: none;
+}
+
+.buttons button {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 11px 22px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.buttons button:hover {
+    background: #0056b3;
+}

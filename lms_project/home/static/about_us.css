@@ -1,0 +1,581 @@
+/* ================================
+ABOUT HERO
+================================ */
+
+.about-hero {
+min-height: 330px;
+
+display: flex;
+align-items: center;
+justify-content: center;
+
+text-align: center;
+
+padding: 60px 20px;
+
+background: linear-gradient(
+    135deg,
+    #eff6ff,
+    #f8fafc
+);
+
+}
+
+.about-hero-content {
+max-width: 760px;
+}
+
+.about-label {
+display: inline-flex;
+
+align-items: center;
+gap: 8px;
+
+margin-bottom: 18px;
+
+color: #2563eb;
+
+font-size: 13px;
+
+font-weight: 700;
+
+letter-spacing: 1.5px;
+
+}
+
+.about-hero h1 {
+margin-bottom: 18px;
+
+color: #0f172a;
+
+font-size: 46px;
+
+line-height: 1.2;
+
+}
+
+.about-hero h1 span {
+color: #2563eb;
+}
+
+.about-hero p {
+max-width: 650px;
+
+margin: auto;
+
+color: #64748b;
+
+font-size: 17px;
+
+line-height: 1.7;
+
+}
+
+/* ================================
+COMMON
+================================ */
+
+.section-label,
+.section-heading > span {
+color: #2563eb;
+
+font-size: 12px;
+
+font-weight: 700;
+
+letter-spacing: 2px;
+
+}
+
+.about-line {
+width: 55px;
+
+height: 3px;
+
+margin: 17px 0;
+
+background: #2563eb;
+
+}
+
+/* ================================
+ABOUT INTRO
+================================ */
+
+.about-intro {
+max-width: 1800px;
+
+margin: auto;
+
+padding: 80px 7%;
+
+display: grid;
+
+grid-template-columns: 1fr 1fr;
+
+gap: 70px;
+
+align-items: center;
+
+}
+
+.about-image {
+overflow: hidden;
+
+border-radius: 18px;
+
+box-shadow: 0 15px 35px rgba(15, 23, 42, 0.12);
+
+}
+
+.about-image img {
+display: block;
+
+width: 100%;
+
+height: 390px;
+
+object-fit: cover;
+
+transition: transform 0.5s ease;
+
+}
+
+.about-image:hover img {
+transform: scale(1.04);
+}
+
+.about-content h2 {
+margin-top: 10px;
+
+color: #0f172a;
+
+font-size: 34px;
+
+}
+
+.about-content p {
+margin-bottom: 15px;
+
+color: #64748b;
+
+font-size: 15px;
+
+line-height: 1.75;
+
+}
+
+/* ================================
+LEARNING SECTION
+================================ */
+
+.learning-section {
+padding: 80px 7%;
+
+background: #f8fafc;
+
+}
+
+.section-heading {
+max-width: 700px;
+
+margin: 0 auto 50px;
+
+text-align: center;
+
+}
+
+.section-heading h2 {
+margin-top: 10px;
+
+color: #0f172a;
+
+font-size: 34px;
+
+}
+
+.section-heading .about-line {
+margin: 17px auto;
+}
+
+.section-heading p {
+color: #64748b;
+
+font-size: 15px;
+
+line-height: 1.7;
+
+}
+
+/* Learning cards */
+
+.learning-cards {
+max-width: 1150px;
+
+margin: auto;
+
+display: grid;
+
+grid-template-columns: repeat(3, 1fr);
+
+gap: 25px;
+
+}
+
+.learning-card {
+padding: 28px;
+
+background: white;
+
+border: 1px solid #e2e8f0;
+
+border-radius: 14px;
+
+text-align: center;
+
+transition: 0.3s ease;
+
+}
+
+.learning-card:hover {
+transform: translateY(-7px);
+
+border-color: #bfdbfe;
+
+box-shadow: 0 14px 30px rgba(15, 23, 42, 0.09);
+
+}
+
+.learning-icon {
+width: 58px;
+height: 58px;
+
+margin: 0 auto 18px;
+
+display: flex;
+
+align-items: center;
+justify-content: center;
+
+border-radius: 12px;
+
+background: #eff6ff;
+
+color: #2563eb;
+
+font-size: 25px;
+
+}
+
+.learning-card h3 {
+margin-bottom: 10px;
+
+color: #0f172a;
+
+font-size: 19px;
+
+}
+
+.learning-card p {
+color: #64748b;
+
+font-size: 14px;
+
+line-height: 1.65;
+
+}
+
+/* ================================
+FEATURES
+================================ */
+
+.features-section {
+padding: 80px 7%;
+
+background: white;
+
+}
+
+.features-container {
+max-width: 1050px;
+
+margin: auto;
+
+display: grid;
+
+grid-template-columns: repeat(2, 1fr);
+
+gap: 25px;
+
+}
+
+.feature-item {
+display: flex;
+
+gap: 18px;
+
+padding: 25px;
+
+border: 1px solid #e2e8f0;
+
+border-radius: 13px;
+
+transition: 0.3s ease;
+
+}
+
+.feature-item:hover {
+transform: translateY(-5px);
+
+box-shadow: 0 10px 25px rgba(15, 23, 42, 0.08);
+
+border-color: #bfdbfe;
+
+}
+
+.feature-icon {
+flex-shrink: 0;
+
+width: 48px;
+height: 48px;
+
+display: flex;
+
+align-items: center;
+justify-content: center;
+
+border-radius: 10px;
+
+background: #eff6ff;
+
+color: #2563eb;
+
+font-size: 20px;
+
+}
+
+.feature-item h3 {
+margin-bottom: 7px;
+
+color: #0f172a;
+
+font-size: 17px;
+
+}
+
+.feature-item p {
+color: #64748b;
+
+font-size: 14px;
+
+line-height: 1.6;
+
+}
+
+/* ================================
+MISSION
+================================ */
+
+.mission {
+padding: 75px 20px;
+
+text-align: center;
+
+background: #eff6ff;
+
+}
+
+.mission-content {
+max-width: 700px;
+
+margin: auto;
+
+}
+
+.mission-icon {
+margin-bottom: 15px;
+
+color: #2563eb;
+
+font-size: 35px;
+
+}
+
+.mission h2 {
+margin-bottom: 15px;
+
+color: #0f172a;
+
+font-size: 32px;
+
+}
+
+.mission p {
+color: #64748b;
+
+font-size: 15px;
+
+line-height: 1.8;
+
+}
+
+/* ================================
+CTA
+================================ */
+
+.about-cta {
+margin: 60px 7% 70px;
+
+padding: 55px 30px;
+
+border-radius: 18px;
+
+text-align: center;
+
+color: white;
+
+background: linear-gradient(
+    135deg,
+    #1d4ed8,
+    #2563eb
+);
+
+box-shadow: 0 15px 35px rgba(37, 99, 235, 0.2);
+
+}
+
+.about-cta h2 {
+margin-bottom: 12px;
+
+font-size: 30px;
+
+}
+
+.about-cta p {
+margin-bottom: 25px;
+
+font-size: 15px;
+
+opacity: 0.9;
+
+}
+
+.about-cta button {
+padding: 12px 25px;
+
+border: none;
+
+border-radius: 7px;
+
+background: white;
+
+color: #2563eb;
+
+font-size: 14px;
+
+font-weight: 600;
+
+cursor: pointer;
+
+transition: 0.3s ease;
+
+}
+
+.about-cta button:hover {
+transform: translateY(-2px);
+
+box-shadow: 0 7px 20px rgba(0, 0, 0, 0.15);
+
+}
+
+.about-cta button i {
+margin-left: 7px;
+}
+
+/* ================================
+RESPONSIVE
+================================ */
+
+@media (max-width: 900px) {
+
+.about-intro {
+    grid-template-columns: 1fr;
+
+    gap: 40px;
+}
+
+.learning-cards {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+}
+
+@media (max-width: 700px) {
+
+.about-hero {
+    padding: 50px 20px;
+}
+
+.about-hero h1 {
+    font-size: 36px;
+}
+
+.about-hero p {
+    font-size: 15px;
+}
+
+.about-intro {
+    padding: 55px 5%;
+}
+
+.about-content h2 {
+    font-size: 28px;
+}
+
+.learning-section,
+.features-section {
+    padding: 55px 5%;
+}
+
+.section-heading h2 {
+    font-size: 28px;
+}
+
+.learning-cards {
+    grid-template-columns: 1fr;
+}
+
+.features-container {
+    grid-template-columns: 1fr;
+}
+
+.about-cta {
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+}
+
+@media (max-width: 450px) {
+
+.about-hero h1 {
+    font-size: 31px;
+}
+
+.about-image img {
+    height: 280px;
+}
+
+.feature-item {
+    padding: 20px;
+}
+
+.about-cta {
+    padding: 40px 20px;
+}
+
+.about-cta h2 {
+    font-size: 25px;
+}
+
+}

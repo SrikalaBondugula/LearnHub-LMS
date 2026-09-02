@@ -1,0 +1,84 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Quizzes</title>
+    <link rel="stylesheet" href="{% static 'quiz.css' %}">
+</head>
+<body>
+
+<div class="container">
+
+    <div class="top-bar">
+        <h1>Quizzes</h1>
+         <div class="top-buttons"> 
+             <a href="{% url 'instructor_dashboard' %}">
+            <button type="button">Dashboard</button>
+            </a>
+
+            <a href="{% url 'create_quiz' %}">
+            <button>Create Quiz</button>
+            </a>
+       </div>
+        
+    </div>
+    {% if messages %}
+
+    {% for message in messages %}
+
+        <div class="message {{ message.tags }}">
+           <p style="color: red;">{{ message }}</p> 
+        </div>
+
+    {% endfor %}
+
+    {% endif %}
+
+    {% if quizzes %}
+
+    <table>
+
+        <tr>
+            <th>Quiz Title</th>
+            <th>Course</th>
+            <th>Actions</th>
+        </tr>
+
+        {% for quiz in quizzes %}
+
+        <tr>
+
+            <td>{{ quiz.q_title }}</td>
+
+            <td>{{ quiz.course.title }}</td>
+
+            <td>
+
+                <a href="{% url 'view_quiz' quiz.id %}">View</a>
+
+                |
+
+                <a href="{% url 'edit_quiz' quiz.id %}">Edit</a>
+
+                |
+
+                <a href="{% url 'delete_quiz' quiz.id %}">Delete</a>
+
+            </td>
+
+        </tr>
+
+        {% endfor %}
+
+    </table>
+
+    {% else %}
+
+    <h2>No quizzes created.</h2>
+
+    {% endif %}
+
+</div>
+
+</body>
+</html>

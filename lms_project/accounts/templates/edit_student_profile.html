@@ -1,0 +1,136 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Edit Profile</title>
+
+    <link rel="stylesheet"
+          href="{% static 'edit_student_profile.css' %}">
+
+</head>
+
+<body>
+
+<div class="page-container">
+
+    <div class="profile-card">
+
+        <div class="profile-header">
+
+            <div class="profile-icon">
+                👤
+            </div>
+
+            <div>
+                <h1>Edit Profile</h1>
+                <p>Update your personal information</p>
+            </div>
+
+        </div>
+
+
+        <form method="POST">
+
+            {% csrf_token %}
+
+            <!-- Username -->
+
+            <div class="form-group">
+
+                <label for="username">
+                    Username
+                </label>
+
+                <input
+                    type="text"
+                    id="username"
+                    name="username"
+                    value="{{ user_details.username }}"
+                    required
+                >
+
+            </div>
+
+
+            <!-- Email -->
+
+            <div class="form-group">
+
+                <label for="email">
+                    Email
+                </label>
+
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    value="{{ user_details.email }}"
+                    required
+                > 
+                {% if error %}
+                <div class="error-message" style="color: red;">
+                {{ error.email.0 }}
+                </div>
+                {% endif %}
+
+            </div>
+           
+
+
+            <!-- Mobile -->
+
+            <div class="form-group">
+
+                <label for="mobile">
+                    Mobile Number
+                </label>
+
+                <input
+                    type="tel"
+                    id="mobile"
+                    name="phoneNumber"
+                    value="{{ user_details.phoneNumber }}"
+                    required
+                >
+                {% if error %}
+                <p style="color: red;">
+                    {{ error.phoneNumber.0 }}
+                </p>
+                {% endif %}
+
+            </div>
+
+
+            <!-- Buttons -->
+
+            <div class="button-container">
+
+                <a href="{% url 'student_profile' %}"
+                   class="cancel-btn">
+                    Cancel
+                </a>
+
+                <button type="submit"
+                        class="save-btn">
+                    Save Changes
+                </button>
+
+            </div>
+
+        </form>
+
+    </div>
+
+</div>
+
+</body>
+
+</html>

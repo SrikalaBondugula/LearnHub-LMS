@@ -1,0 +1,365 @@
+/* ================================
+   Certificates Container
+================================ */
+
+.certificates-container {
+    width: 100%;
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+
+/* ================================
+   Certificate Card
+================================ */
+
+.certificate-card {
+    width: 100%;
+    max-width: 1050px;
+    margin: 0 auto 40px auto;
+    padding: 15px;
+    background: #ffffff;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+
+/* ================================
+   Certificate Inner
+================================ */
+
+.certificate-inner {
+    min-height: 550px;
+    border: 8px solid #1f2937;
+    outline: 2px solid #d4af37;
+    outline-offset: -18px;
+
+    padding: 55px 70px;
+
+    text-align: center;
+
+    position: relative;
+
+    box-sizing: border-box;
+
+    background: #fffdf7;
+}
+
+
+/* ================================
+   LearnHub Brand
+================================ */
+
+.certificate-brand {
+    font-size: 34px;
+    font-weight: 800;
+    letter-spacing: 5px;
+    color: #111827;
+}
+
+
+.certificate-subtitle {
+    margin-top: 5px;
+    font-size: 13px;
+    letter-spacing: 3px;
+    color: #6b7280;
+}
+
+
+/* ================================
+   Decorative Line
+================================ */
+
+.certificate-line {
+    width: 100px;
+    height: 3px;
+
+    margin: 20px auto;
+
+    background: #d4af37;
+}
+
+
+/* ================================
+   Certificate Heading
+================================ */
+
+.certificate-inner h1 {
+    margin: 5px 0 0 0;
+
+    font-size: 42px;
+
+    letter-spacing: 8px;
+
+    color: #111827;
+}
+
+
+.certificate-inner h2 {
+    margin: 5px 0;
+
+    font-size: 20px;
+
+    letter-spacing: 4px;
+
+    color: #6b7280;
+}
+
+
+/* ================================
+   Text
+================================ */
+
+.presented-text {
+    margin-top: 35px;
+
+    font-size: 16px;
+
+    color: #555;
+}
+
+
+.completion-text {
+    margin-top: 20px;
+
+    font-size: 16px;
+
+    color: #555;
+}
+
+
+/* ================================
+   Student Name
+================================ */
+
+.student-name {
+    margin: 12px 0;
+
+    font-size: 36px;
+
+    font-family: Georgia, serif;
+
+    font-weight: 600;
+
+    color: #111827;
+}
+
+
+/* ================================
+   Course Name
+================================ */
+
+.course-name {
+    margin-top: 15px !important;
+
+    font-size: 28px !important;
+
+    color: #1f2937 !important;
+
+    letter-spacing: 1px !important;
+}
+
+
+/* ================================
+   Congratulations
+================================ */
+
+.congratulations {
+    margin-top: 25px;
+
+    font-size: 15px;
+
+    font-style: italic;
+
+    color: #6b7280;
+}
+
+
+/* ================================
+   Footer
+================================ */
+
+.certificate-footer {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: flex-end;
+
+    margin-top: 45px;
+}
+
+
+/* ================================
+   Signature
+================================ */
+
+.signature {
+    text-align: center;
+}
+
+
+.signature-line {
+    width: 170px;
+
+    border-top: 1px solid #555;
+
+    margin-bottom: 8px;
+}
+
+
+.signature span {
+    font-size: 13px;
+
+    color: #555;
+}
+
+
+/* ================================
+   Download Button
+================================ */
+
+.download-btn {
+    display: inline-block;
+
+    padding: 12px 22px;
+
+    background: #111827;
+
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 6px;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    transition: 0.2s ease;
+}
+
+
+.download-btn:hover {
+    background: #374151;
+
+    transform: translateY(-2px);
+}
+
+
+/* ================================
+   No Certificates
+================================ */
+
+.no-certificates {
+    max-width: 600px;
+
+    margin: 80px auto;
+
+    padding: 60px 30px;
+
+    text-align: center;
+
+    background: white;
+
+    border-radius: 12px;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+
+.empty-icon {
+    font-size: 55px;
+
+    margin-bottom: 20px;
+}
+
+
+.no-certificates h2 {
+    margin-bottom: 10px;
+
+    color: #1f2937;
+}
+
+
+.no-certificates p {
+    color: #6b7280;
+
+    line-height: 1.6;
+}
+
+
+/* ================================
+   Continue Learning Button
+================================ */
+
+.course-btn {
+    display: inline-block;
+
+    margin-top: 20px;
+
+    padding: 12px 20px;
+
+    background: #111827;
+
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 6px;
+
+    font-weight: 600;
+}
+
+
+/* ================================
+   Responsive Design
+================================ */
+
+@media (max-width: 768px) {
+
+    .certificates-container {
+        padding: 15px;
+    }
+
+    .certificate-inner {
+        padding: 40px 25px;
+
+        min-height: 500px;
+    }
+
+    .certificate-brand {
+        font-size: 26px;
+    }
+
+    .certificate-inner h1 {
+        font-size: 30px;
+
+        letter-spacing: 5px;
+    }
+
+    .student-name {
+        font-size: 28px;
+    }
+
+    .course-name {
+        font-size: 22px !important;
+    }
+
+    .certificate-footer {
+        flex-direction: column;
+
+        align-items: center;
+
+        gap: 25px;
+    }
+
+    .download-btn {
+        width: 100%;
+
+        text-align: center;
+
+        box-sizing: border-box;
+    }
+}

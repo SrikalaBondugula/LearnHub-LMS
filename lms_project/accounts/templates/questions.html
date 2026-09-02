@@ -1,0 +1,96 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Questions</title>
+    <link rel="stylesheet" href="{% static 'questions.css' %}">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>Create Assessment Questions</h1>
+
+    {% if messages %}
+        {% for msg in messages %}
+            <p style="color:red; text-align:center;">{{ msg }}</p>
+        {% endfor %}
+    {% endif %}
+
+    <form method="POST">
+        {% csrf_token %}
+        {% for i in num_of_qns %}
+
+        <div class="question-card">
+
+            <h2>Question {{ i }}</h2>
+
+            <div class="form-group">
+                <label>Question</label>
+                <textarea
+                    name="question{{ i }}"
+                    rows="3"
+                    placeholder="Enter Question {{ i }}"
+                ></textarea>
+            </div>
+
+            <div class="form-group">
+                <label>Option A</label>
+                <input
+                    type="text"
+                    name="option1_{{ i }}"
+                    placeholder="Enter Option A">
+            </div>
+
+            <div class="form-group">
+                <label>Option B</label>
+                <input
+                    type="text"
+                    name="option2_{{ i }}"
+                    placeholder="Enter Option B">
+            </div>
+
+            <div class="form-group">
+                <label>Option C</label>
+                <input
+                    type="text"
+                    name="option3_{{ i }}"
+                    placeholder="Enter Option C">
+            </div>
+
+            <div class="form-group">
+                <label>Option D</label>
+                <input
+                    type="text"
+                    name="option4_{{ i }}"
+                    placeholder="Enter Option D">
+            </div>
+
+            <div class="form-group">
+                <label>Correct Answer</label>
+
+                <select name="correct_answer{{ i }}">
+                    <option value="">Select Correct Answer</option>
+                    <option value="Option A">Option A</option>
+                    <option value="Option B">Option B</option>
+                    <option value="Option C">Option C</option>
+                    <option value="Option D">Option D</option>
+                </select>
+            </div>
+
+        </div>
+
+        {% endfor %}
+
+       <a href="{% url 'quiz' %}"></a> <button type="submit" class="submit-btn">
+            Save Questions & Create Quiz
+        </button>
+
+    </form>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,48 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'result.css' %}">
+
+
+</head>
+<body>
+    {% if quiz_submitted %}
+
+<div class="popup-overlay">
+
+    <div class="score-popup">
+
+        <div class="score-icon">
+            🎉
+        </div>
+
+        <h2>Quiz Completed!</h2>
+
+        <p class="score-label">Your Score</p>
+
+        <div class="score">
+            {{ score }} / {{ total_questions }}
+        </div>
+
+        <p class="score-message">
+            You answered {{ score }} out of
+            {{ total_questions }} questions correctly.
+        </p>
+
+        <a href="{% url 'quiz_display_student' %}">
+            <button class="close-btn">
+                Back to Quizzes
+            </button>
+        </a>
+
+    </div>
+
+</div>
+
+{% endif %}
+</body>
+</html>

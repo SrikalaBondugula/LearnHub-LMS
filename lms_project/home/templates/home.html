@@ -1,0 +1,112 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+LearnHub LMS
+{% endblock %}
+
+{% block content %}
+
+<section class="hero">
+
+<div class="hero-content">
+
+    <h1>
+        Welcome to<br>
+        LearnHub LMS
+    </h1>
+
+    <p>
+        Your all-in-one platform to learn, teach and grow.<br>
+        Explore courses, track your progress and<br>
+        achieve your goals.
+    </p>
+
+    <div class="hero-buttons">
+
+        <a href="{% url 'login' %}">
+            <button class="login-btn">
+                <i class="fa-solid fa-right-to-bracket"></i>
+                Login
+            </button>
+        </a>
+
+        <a href="{% url 'register' %}">
+            <button class="register-btn">
+                <i class="fa-solid fa-user-plus"></i>
+                Register
+            </button>
+        </a>
+
+    </div>
+
+</div>
+
+
+<div class="hero-image">
+    <img src="{% static 'images/lmshome.jpg' %}" alt="home image">
+</div>
+
+</section>
+
+<section class="why">
+
+<h2>Why LearnHub LMS?</h2>
+
+<div class="line"></div>
+
+
+<div class="cards">
+
+    <div class="card">
+
+        <div class="icon blue">
+            <i class="fa-solid fa-book-open"></i>
+        </div>
+
+        <h3>Quality Courses</h3>
+
+        <p>
+            Learn from expert instructors
+            with well-structured courses.
+        </p>
+
+    </div>
+
+
+    <div class="card">
+
+        <div class="icon orange">
+            <i class="fa-solid fa-clipboard-check"></i>
+        </div>
+
+        <h3>Assignments & Quizzes</h3>
+
+        <p>
+            Test your knowledge with
+            assignments and quizzes.
+        </p>
+
+    </div>
+
+
+    <div class="card">
+
+        <div class="icon purple">
+            <i class="fa-solid fa-certificate"></i>
+        </div>
+
+        <h3>Certificates</h3>
+
+        <p>
+            Earn certificates and showcase
+            your achievements.
+        </p>
+
+    </div>
+
+</div>
+
+</section>
+
+{% endblock %}

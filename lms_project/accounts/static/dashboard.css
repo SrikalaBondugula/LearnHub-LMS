@@ -1,0 +1,196 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    background:#f5f7fb;
+}
+
+header{
+    background:#14213d;
+    color:white;
+    padding:18px 60px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.user{
+    display:flex;
+    gap:20px;
+    align-items:center;
+}
+
+.user a{
+    text-decoration:none;
+    color:white;
+    background:#fca311;
+    padding:8px 18px;
+    border-radius:6px;
+}
+
+.hero{
+    text-align:center;
+    padding:50px;
+    background:white;
+}
+
+.hero h1{
+    font-size:38px;
+    color:#14213d;
+}
+
+.hero p{
+    margin-top:10px;
+    color:gray;
+}
+
+.cards{
+    width:90%;
+    margin:40px auto;
+    display:flex;
+    gap:25px;
+    justify-content:center;
+    flex-wrap:wrap;
+}
+
+.card{
+    width:250px;
+    background:white;
+    padding:30px;
+    border-radius:12px;
+    text-align:center;
+    box-shadow:0 0 12px rgba(0,0,0,.1);
+}
+
+.card h3{
+    color:#14213d;
+}
+
+.card p{
+    margin-top:15px;
+    font-size:34px;
+    color:#fca311;
+    font-weight:bold;
+}
+
+.courses{
+    width:90%;
+    margin:auto;
+    margin-bottom:60px;
+}
+
+.courses h2{
+    color:#14213d;
+    margin-bottom:25px;
+}
+
+.course-container{
+    display:flex;
+    gap:25px;
+    flex-wrap:wrap;
+}
+
+.course{
+    background:white;
+    width:320px;
+    padding:25px;
+    border-radius:10px;
+    box-shadow:0 0 10px rgba(0,0,0,.1);
+}
+
+.course p{
+    margin:15px 0;
+    color:#666;
+}
+
+.course button{
+    background:#14213d;
+    color:white;
+    border:none;
+    padding:12px 20px;
+    border-radius:6px;
+    cursor:pointer;
+}
+
+.course button:hover{
+    background:#fca311;
+    color:#14213d;
+}
+
+footer{
+    background:#14213d;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+.motivation {
+    width: 90%;
+    margin: 40px auto 60px;
+    padding: 30px 40px;
+
+    background: white;
+    border-radius: 15px;
+
+    display: flex;
+    align-items: center;
+    gap: 50px;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+
+/* Image */
+
+.motivation-image {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.motivation-image img {
+    width: 100%;
+    max-width: 350px;
+    height: 220px;
+
+    object-fit: contain;
+}
+
+
+/* Text */
+
+.motivation-content {
+    flex: 1;
+    text-align: left;
+}
+
+.motivation-content h2 {
+    color: #14213d;
+    font-size: 30px;
+    margin-bottom: 18px;
+}
+
+.motivation-content .quote {
+    color: #555;
+    font-size: 20px;
+    font-style: italic;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.motivation-content .author {
+    color: #fca311;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.motivation-content .message {
+    color: #666;
+    font-size: 16px;
+    line-height: 1.5;
+    margin-top: 18px;
+}

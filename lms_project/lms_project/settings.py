@@ -56,7 +56,10 @@ cloudinary.config(
     secure=True
 )
 import os
-os.add_dll_directory(r"C:\msys64\ucrt64\bin")
+import sys
+
+if sys.platform == "win32":
+    os.add_dll_directory(r"C:\msys64\ucrt64\bin")
 
 EMAIL_BACKEND="django.core.mail.backends.smtp.EmailBackend"
 EMAIL_HOST="smtp.gmail.com"
